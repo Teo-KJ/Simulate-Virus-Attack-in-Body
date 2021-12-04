@@ -42,3 +42,43 @@ const BUSY = 1;
 // There are two types of caregivers in our system: doctors and receptionists
 const DOCTOR = 0;
 const RECEPTIONIST = 1;
+console.log(RECEPTIONIST )
+
+// patients is a dynamic list, initially empty
+var patients = [];
+// caregivers is a static list, populated with a receptionist and a doctor	
+var caregivers = [
+    {"type":DOCTOR,"label":"Doctor","location":{"row":doctorRow,"col":doctorCol},"state":IDLE},
+	{"type":RECEPTIONIST,"label":"Receptionist","location":{"row":receptionistRow,"col":receptionistCol},"state":IDLE}
+];
+var doctor = caregivers[0]; // the doctor is the first element of the caregivers list.
+
+// We can section our screen into different areas. In this model, the waiting area and the staging area are separate.
+var areas =[
+ {"label":"Waiting Area","startRow":4,"numRows":5,"startCol":15,"numCols":11,"color":"pink"},
+ {"label":"Staging Area","startRow":doctorRow-1,"numRows":1,"startCol":doctorCol-2,"numCols":5,"color":"red"}	
+]
+var waitingRoom = areas[0]; // the waiting room is the first element of the areas array
+
+var currentTime = 0;
+var statistics = [
+{"name":"Average time in clinic, Type A: ","location":{"row":doctorRow+3,"col":doctorCol-4},"cumulativeValue":0,"count":0},
+{"name":"Average time in clinic, Type B: ","location":{"row":doctorRow+4,"col":doctorCol-4},"cumulativeValue":0,"count":0}
+];
+
+// The probability of a patient arrival needs to be less than the probability of a departure, else an infinite queue will build.
+// You also need to allow travel time for patients to move from their seat in the waiting room to get close to the doctor.
+// So don't set probDeparture too close to probArrival.
+var probArrival = 0.25;
+var probDeparture = 0.4;
+
+// We can have different types of patients (A and B) according to a probability, probTypeA.
+// This version of the simulation makes no difference between A and B patients except for the display image
+// Later assignments can build on this basic structure.
+var probTypeA = 0.5;
+
+// To manage the queues, we need to keep track of patientIDs.
+var nextPatientID_A = 0; // increment this and assign it to the next admitted patient of type A
+var nextPatientID_B = 0; // increment this and assign it to the next admitted patient of type B
+var nextTreatedPatientID_A =1; //this is the id of the next patient of type A to be treated by the doctor
+var nextTreatedPatientID_B =1; //this is the id of the next patient of type B to be treated by the doctor
