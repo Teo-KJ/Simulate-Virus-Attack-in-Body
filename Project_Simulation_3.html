@@ -18,8 +18,11 @@
 		<link rel="stylesheet" href="styles/basicagentmodel.css" media="screen">
 
 </head>
+
 <!-- Set class to official for more formal font; unofficial for informal font -->
 <body class="official bgColor1">
+	<p id="title"  style="position:absolute;left:1%;">40.015 SMA Project Simulation 3 - Project 26</p>
+	
 	<p style="position:absolute;top:2.5%;left:50%; font-size:18px">Simulation Parameters</p>
 	<p style="position:absolute;top:2.5%;left:80%; font-size:18px">Graphs</p>
 
@@ -45,19 +48,20 @@
 	</div>	
 	
 	<!-- The surface is the main playing field for the game -->
-	<svg  id="surface" style="width:100% height:100%" xmlns="http://www.w3.org/2000/svg" version="1.1" onclick="toggleSimStep();">
+	<svg  id="surface" style="width:100%; height:100%;" xmlns="http://www.w3.org/2000/svg" version="1.1" onclick="toggleSimStep();">
 	</svg>
 	
-	<div id="title"  style="position:absolute;bottom:0;left:0;">40.015 SMA Project Simulation 3 - Project 26</div>
+	<a id="title"  href="http://www.icons-land.com" style="position:absolute;bottom:0;left:0;">Simulation 1 - System Dynamics</a>
 	<a id="credits" href="http://www.icons-land.com" style="position:absolute;bottom:0;right:0">Icons by icons-land.com</a>
 	
 	<!-- Anything below this line should be a popup window or dialog or a late-loading library -->
 	
-	<script type="text/javascript" src="lib/constants.js"></script>
-	<script type="text/javascript" src="lib/functions/functions.js"></script>
+	<script type="text/javascript" src="lib/variables.js"></script>
+	<script type="text/javascript" src="lib/functions/other_functions.js"></script>
 	<script type="text/javascript" src="lib/functions/updateSurface_function.js"></script>
 	<script type="text/javascript" src="lib/functions/updateCitizen_function.js"></script>
 	<script type="text/javascript" src="lib/functions/updateDynamicAgents_function.js"></script>
+	<script type="text/javascript" src="lib/functions/redrawWindow_function.js"></script>
 	<script type="text/javascript" src="lib/main_simulation.js"></script>
 
 	<!-- Add in Charts -->	
