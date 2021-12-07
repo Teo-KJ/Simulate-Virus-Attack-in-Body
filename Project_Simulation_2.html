@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head>
-<title>Project Simulation 3</title>
+<title>Project Simulation 2</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 		<!-- d3 is for data visualization -->
@@ -20,7 +20,7 @@
 
 <!-- Set class to official for more formal font; unofficial for informal font -->
 <body class="official bgColor1">
-	<p id="title"  style="position:absolute;left:1%;">40.015 SMA Project Simulation 3 - Project 26</p>
+	<p id="title" style="position:absolute;left:1%;">40.015 SMA Project Simulation 2 - Project 26</p>
 	
 	<p style="position:absolute;top:2.5%;left:50%; font-size:18px">Simulation Parameters</p>
 	<p style="position:absolute;top:2.5%;left:80%; font-size:18px">Graphs</p>
@@ -35,14 +35,14 @@
 		<p style="position:absolute;top:32.5%;left:5%"> 3) Probability of Departure</p>
 		<p><input id="slider3" type="range" min="0" value="0.2" max="1" step="0.05" onchange="redrawWindow();" style="position:absolute;top:42.5%;left:5%" /></p>
 		
-		<p style="position:absolute;top:47.5%;left:5%"> 4) Initial Oxygen Supply</p>
+		<p style="position:absolute;top:47.5%;left:5%"> 4) Viral Load </p>
 		<p><input id="slider4" type="range" min="0" value="0.2" max="1" step="0.05" onchange="redrawWindow();" style="position:absolute;top:57.5%;left:5%" /></p>
 		
-		<p style="position:absolute;top:62.5%;left:5%"> 5) InfectionRate</p>
-		<p><input id="slider5" type="range" min="0" value="0.3" max="1" step="0.05" onchange="redrawWindow();" style="position:absolute;top:72.5%;left:5%" /></p>
+		<p style="position:absolute;top:62.5%;left:5%"> 5) Kidney Functionality</p>
+		<p><input id="slider5" type="range" min="0" value="0.8" max="1" step="0.05" onchange="redrawWindow();" style="position:absolute;top:72.5%;left:5%" /></p>
 		
-		<p style="position:absolute;top:77.5%;left:5%"> 6) Distance of Transmission</p>
-		<p><input id="slider6" type="range" min="0" value="1" max="3" step="0.5" onchange="redrawWindow();" style="position:absolute;top:87.5%;left:5%" /></p>
+		<p style="position:absolute;top:77.5%;left:5%"> 6) Liver Functionality</p>
+		<p><input id="slider6" type="range" min="0" value="0.8" max="1" step="0.05" onchange="redrawWindow();" style="position:absolute;top:87.5%;left:5%" /></p>
 	</div>
 	</div>	
 	
@@ -50,7 +50,8 @@
 	<svg  id="surface" style="width:100%; height:100%;" xmlns="http://www.w3.org/2000/svg" version="1.1" onclick="toggleSimStep();">
 	</svg>
 	
-	<a id="title"  href="http://www.icons-land.com" style="position:absolute;bottom:0;left:0;">Simulation 1 - System Dynamics</a>
+	<a id="title"  href="https://insightmaker.com/insight/244529/VirusModel" style="position:absolute;bottom:0;left:0;" target="_blank" rel="noopener noreferrer">
+		Simulation 1 - System Dynamics</a>
 	<a id="credits" href="http://www.icons-land.com" style="position:absolute;bottom:0;right:0">Icons by icons-land.com</a>
 	
 	<!-- Anything below this line should be a popup window or dialog or a late-loading library -->
