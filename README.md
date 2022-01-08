@@ -1,5 +1,10 @@
 # Simulation-Modelling-and-Analysis-Project
-Project for 40.015 Simulation Modelling and Analysis
+Code repository for SUTD ESD 40.015 Simulation Modelling and Analysis Group Project.
+
+By Hazwan, Lulu, Kai Jie
+
+## About the Project
+
 
 ## Guide
 Q: How to separate the JavaScript files for modularity?
